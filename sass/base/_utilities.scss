@@ -1,0 +1,71 @@
+.line {
+    width: 30%;
+    height: 0.1rem;
+    background: $tertiary-color;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    margin-top: 6.3rem;
+  }
+  .subheading-one{
+    font-family: $bellefair-font;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+  .subheading-two{
+    text-transform: uppercase;
+    font-family: $barlow-Condensed-font;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.236rem;
+    line-height: 1.68rem;
+    color: $quaternary-color;
+  }
+  .h2-interactive-el{
+    font-family: $barlow-Condensed-font;
+    color: $quaternary-color;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.4725rem;
+    margin: 5rem;
+    text-transform: uppercase;
+          .span-interactive-el {
+               color:$primary-white-color;
+               opacity: 0.25;
+               }
+  }
+  .lineToBeHidden{
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px){
+    .h2-interactive-el{
+      display: flex;
+      justify-content: flex-start;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin: 5rem 4rem 7rem;
+    }
+    .techs-section-container{
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  @media only screen and (max-width: 375px){
+    .h2-interactive-el{
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.6rem;
+      line-height: 1.92rem;
+      margin: 5rem 4rem 4rem;
+    }
+    .subheading-two{
+      text-align: center;
+    }
+    .crew-section-container{
+      flex-direction: column-reverse !important;
+    }
+  }

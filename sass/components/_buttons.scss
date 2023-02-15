@@ -1,0 +1,161 @@
+.exploreBtn {
+      text-decoration: none;
+      position: relative;
+      width: 19rem;
+      height: 19rem;
+      background-color: $primary-white-color;
+      border-radius: 10rem;
+      padding: 9rem 1.8rem 8rem;
+      span {
+        font-family: "Bellefair";
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 3.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: $secondary-color;
+      }
+      &:hover {
+        transform: translate(0rem);
+        &::after {
+          transform: scaleX(1.4) scaleY(1.4);
+          opacity: 0;
+        }
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 1s;
+        background-color: grey;
+    }
+    }
+  // crew slider buttons
+  .crew-slider-btn{
+    background-color: rgba(89, 89, 89, 0.418);
+    border: 0.1rem solid rgba(89, 89, 89, 0.418);
+    border-radius: 4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    &:hover {
+     background-color: gray;
+     }
+  }
+  // destination buttons
+  .secondary-btn-nav{
+    color: $primary-white-color;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $barlow-Condensed-font;
+    font-size: 1.6rem;
+    font-weight: 400;
+    &.active{
+      position: relative;
+      &::after{
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        background-color: $primary-white-color;
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+      }
+    }
+    &:hover{
+      &::after{
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        background-color: $hover-rec-color;
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+      }
+    }
+  }
+  // technologies
+  .tech-btn-nav{ 
+    text-decoration: none;
+    color: $primary-white-color;
+    background-color: $blackish-color;
+    border: 1px solid $secondary-color;
+    padding: 2.2rem 2.8rem;
+    border-radius: 5.5rem;
+    margin: 0rem 6.5rem 4.5rem 0rem;
+    font-size: 1.5rem;
+    font-family: $bellefair-font;
+    cursor: pointer;
+  &:hover{
+    border: 0.1rem solid $primary-white-color;
+  }
+  }
+  .activetech{
+    color: $blackish-color;
+    background-color: $primary-white-color;
+    border: 0.1rem solid $primary-white-color;
+  }
+  @media only screen and (max-width: 768px){
+    .exploreBtn {
+      width: 14rem;
+      height: 14rem;
+      padding: 6rem 1.2rem 5.5rem;
+      span {
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+      }
+      &:hover {
+        transform: translate(0rem);
+        &::after {
+          transform: scaleX(1.2) scaleY(1.2);
+          opacity: 0;
+        }
+      }
+      &::after {
+        background-color: rgb(77, 77, 77);
+    }
+    }
+    .tech-btn-nav{ 
+      padding: 2rem 2.6rem;
+      border-radius: 5.5rem;
+      margin:1.5rem;
+      font-size: 1.2rem;
+    }
+  }
+  // Mobile Media Queries
+  @media only screen and (max-width: 375px){
+    .exploreBtn {
+      width: 12rem;
+      height: 12rem;
+      padding: 5rem 1rem 4.5rem;
+      span {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      &:hover {
+        transform: translate(0rem);
+        &::after {
+          transform: scaleX(1.2) scaleY(1.2);
+          opacity: 0;
+        }
+      }
+      &::after {
+        background-color: rgb(77, 77, 77);
+    }
+    }
+    .secondary-btn-nav{
+      font-size: 1.4rem;
+    }
+    .tech-btn-nav{ 
+      padding: 1.6rem 2.1rem;
+      font-size: 1.1rem;
+    }
+  }
+  

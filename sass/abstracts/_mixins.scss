@@ -1,0 +1,39 @@
+@mixin main-body-p {
+    font-family: $barlow-font;
+    color: $quaternary-color;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+}
+@mixin active-rectangles {
+    border: .15rem solid $tertiary-color;
+    bottom: -2.7rem;
+    background-color: $tertiary-color;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+@mixin hover-rectangles {
+    border: .15rem solid $hover-rec-color;
+    bottom: -2.7rem;
+    background-color: $hover-rec-color;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+@mixin active-rectangles-destination {
+    border: .1rem solid $tertiary-color;
+    bottom: -1.5rem;
+    background-color: $tertiary-color;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+@mixin hover-rectangles-destination {
+    border: .1rem solid $hover-rec-color;
+    bottom: -1.5rem;
+    background-color: $hover-rec-color;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}

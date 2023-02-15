@@ -1,0 +1,546 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/animations";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/composition";
+
+@import "layouts/footer";
+@import "layouts/header";
+
+@import "pages/home";
+
+body {
+  display: flex;
+  flex-direction: column;
+  .sections-container {
+    display: flex;
+    .left-section {
+      width: 50%;
+      .text-wrapper {
+        width: 75%;
+        margin: 7rem auto 0rem;
+        .h2-sub-heading {
+          font: 400 2.8rem/3.4rem $barlow-Condensed-font;
+          letter-spacing: 0.4725rem;
+          color: $quaternary-color;
+        }
+      }
+      .primary-heading {
+        font: 400 15rem/17.2rem $bellefair-font;
+        text-transform: uppercase;
+      }
+      .body-text {
+        width: 41.5rem;
+        @include main-body-p;
+      }
+    }
+    .right-section {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .explore-wrapper {
+        margin-top: 15rem;
+      }
+    }
+
+    // Crew Section typography.
+    .crew-left-section {
+      width: 60%;
+      .text-wrapper {
+        width: fit-content;
+        margin: 2rem 0rem 0rem 11rem;
+        h3 {
+          font: 400 3.2rem $bellefair-font;
+          text-transform: uppercase;
+          color: $primary-white-color;
+          opacity: 0.25;
+          margin-bottom: 1.5rem;
+        }
+
+        .crew-agent-name {
+          font: 400 5.6rem $bellefair-font;
+          color: $primary-white-color;
+          text-transform: uppercase;
+        }
+        p {
+          @include main-body-p;
+          color: $quaternary-color;
+          width: 45rem;
+          margin-top: 1rem;
+        }
+      }
+      .crew-slider-nav {
+        margin: 2.5rem 0rem 2.5rem 11rem;
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          width: 10rem;
+          height: 0.8rem;
+        }
+      }
+    }
+    // Crew right section
+    .crew-right-section {
+      width: 40%;
+      .crew-primary-img {
+        display: block;
+        width: 67%;
+        margin-top: -2rem;
+      }
+    }
+    // Destination page Typography
+    // Left-section...
+    .destination-left-section {
+      width: 55%;
+      img {
+        display: block;
+        width: 55%;
+        margin-left: 12rem;
+      }
+    }
+    // Right
+    .destination-right-section {
+      width: 45%;
+      text-align: initial;
+      .destination-text-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .destination-tab-container {
+          margin-bottom: 1.5rem;
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 20rem;
+            li {
+              position: relative;
+            }
+          }
+        }
+        .primary-heading {
+          font: 400 10rem/11.46rem $bellefair-font;
+          text-transform: uppercase;
+          font-family: $bellefair-font;
+          color: $primary-white-color;
+        }
+        .destination-body-text {
+          @include main-body-p;
+          color: rgba(208, 214, 249, 1);
+          width: 45rem;
+        }
+        .line {
+          margin: 6rem 0rem 2rem;
+        }
+        .distance-and-timing-wrapper {
+          margin-bottom: 3rem;
+          display: flex;
+          .distance {
+            margin-right: 7rem;
+          }
+        }
+      }
+    }
+    // Technologies Page...
+    // Technologies Left section...
+    .techs-left-section {
+      width: 63%;
+      .techs-text-wrapper {
+        width: 95%;
+        margin: 0rem 0rem 0rem 5rem !important;
+        article {
+          display: flex;
+          .second-slider {
+            ul {
+              list-style: none;
+              li {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+              }
+            }
+          }
+          .techs-body-text-container {
+            span {
+              font: 400 1.6rem/1.9rem $barlow-Condensed-font;
+              text-transform: uppercase;
+              letter-spacing: 0.27rem;
+              color: $quaternary-color;
+            }
+            .techs-primary-heading {
+              font: 400 5.6rem/6.4rem $bellefair-font;
+              color: $primary-white-color;
+              margin: 1rem 0rem 2rem 0rem;
+            }
+            .techs-body-text {
+              color: $quaternary-color;
+            }
+          }
+        }
+      }
+    }
+    // Technologies Right section
+    .techs-right-section {
+      width: 37%;
+      .changed-img {
+        width: 32rem;
+      }
+    }
+  }
+}
+// tablet media queries
+@media only screen and (max-width: 767px) {
+  .sections-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .left-section {
+      width: fit-content;
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 11rem;
+        .h2-sub-heading {
+          font-size: 2rem;
+          line-height: 2.4rem;
+          letter-spacing: 0.3375rem;
+          margin-bottom: 2rem;
+        }
+        .primary-heading {
+          font-size: 15rem;
+          line-height: 15rem;
+          margin-bottom: 2rem;
+        }
+        .body-text {
+          width: fit-content;
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          width: 44.4rem;
+        }
+      }
+    }
+    .right-section {
+      .explore-wrapper {
+        margin-top: 19rem;
+        padding-bottom: 19rem;
+      }
+    }
+
+    // Crew Section typography.
+    .crew-left-section {
+      width: 100% !important;
+      .text-wrapper {
+        margin: 0rem auto !important;
+        h3 {
+          font-size: 2.4rem;
+        }
+        .crew-agent-name {
+          font-size: 4rem;
+        }
+        p {
+          @include main-body-p;
+          font-size: 1.6rem;
+          width: 45rem;
+          margin-top: 1rem;
+        }
+      }
+      .crew-slider-nav {
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0rem !important;
+      }
+    }
+    // Crew right section
+    .crew-right-section {
+      width: 100%;
+      .crew-primary-img {
+        height: 42rem;
+        width: 37rem !important;
+        margin-top: 0rem !important;
+      }
+    }
+    // Destination page Typography
+    // Left-section...
+    .destination-left-section {
+      width: 100%;
+      img {
+        display: block;
+        width: 30rem;
+        margin: 0 auto !important;
+      }
+    }
+    // Right
+    .destination-right-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .destination-text-wrapper {
+        justify-content: space-between;
+        .destination-tab-container {
+          display: flex;
+          justify-content: center;
+          margin: 15rem 0rem 0rem;
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 28rem;
+          }
+        }
+        .moon-primary-heading {
+          font-size: 2rem;
+          line-height: 9.2rem;
+          margin: 2rem auto;
+          color: #fff;
+        }
+        .destination-body-text {
+          font-size: 1.6rem;
+          color: rgba(208, 214, 249, 1);
+          width: 57rem;
+          text-align: center;
+        }
+        .line {
+          margin: 4rem 0rem 2rem;
+          width: 100%;
+        }
+        .distance-and-timing-wrapper {
+          justify-content: center;
+        }
+      }
+    }
+    // Technologies Page...
+    // Technologies Left section...
+    .techs-left-section {
+      width: 100%;
+      .techs-text-wrapper {
+        width: 100%;
+        margin: 0rem;
+        article {
+          display: flex;
+          flex-direction: column;
+          .second-slider {
+            ul {
+              display: flex;
+              justify-content: center;
+            }
+          }
+          .techs-body-text-container {
+            margin-bottom: 3rem;
+            .techs-primary-heading {
+              font-size: 4rem !important;
+              line-height: 4.6rem !important;
+            }
+          }
+        }
+      }
+    }
+    // Technologies Right section
+    .techs-right-section {
+      width: 37%;
+      .changed-img {
+        width: 50.7rem;
+        margin: 0rem 7rem 2rem;
+      }
+    }
+  }
+}
+// Phone Media queries
+@media only screen and (max-width: 374px) {
+  body {
+    height: 100vh;
+
+    .sections-container {
+      .left-section {
+        .text-wrapper {
+          margin-top: 5rem;
+          .h2-sub-heading {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            letter-spacing: 0.27rem;
+            margin-bottom: 1.7rem;
+          }
+          .primary-heading {
+            font-size: 8rem;
+            line-height: 10rem;
+            margin-bottom: 2rem;
+          }
+          .body-text {
+            width: fit-content;
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+            width: 30.7rem;
+          }
+        }
+      }
+      .right-section {
+        .explore-wrapper {
+          margin-top: 11rem;
+          padding-bottom: 8rem;
+        }
+      }
+
+      // Crew Section typography.
+      .crew-left-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        .text-wrapper {
+          width: fit-content;
+          margin: 3rem auto 5rem;
+          h3 {
+            font-size: 1.6rem;
+          }
+          .crew-agent-name {
+            font-size: 2.4rem;
+          }
+          p {
+            @include main-body-p;
+            font-size: 1.5rem;
+            width: 32.7rem;
+            margin-top: 1rem;
+          }
+        }
+        .crew-slider-nav {
+          margin: 4rem 0rem 0rem;
+        }
+      }
+      // Crew right section
+      .crew-right-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .line {
+          display: block;
+          width: 80%;
+          height: 0.1rem;
+          background: #fff;
+          mix-blend-mode: normal;
+          opacity: 0.25;
+          margin-top: 0rem;
+        }
+        .crew-primary-img {
+          height: 22rem;
+          width: 50% !important;
+        }
+      }
+      // Destination page Typography
+      // Left-section...
+      .destination-left-section {
+        img {
+          width: 18rem;
+        }
+      }
+      // Right
+      .destination-right-section {
+        .destination-text-wrapper {
+          justify-content: space-between;
+          .destination-tab-container {
+            display: flex;
+            justify-content: center;
+            margin: 11rem 0rem 0rem;
+            ul {
+              width: 20rem;
+            }
+          }
+          .moon-primary-heading {
+            font-size: 5.6rem;
+            line-height: 6.4rem;
+          }
+          .destination-body-text {
+            font-size: 1.5rem;
+            width: 32.7rem;
+          }
+          .distance-and-timing-wrapper {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .distance {
+              margin-bottom: 2rem;
+              margin-right: 0rem;
+            }
+            .timing {
+              text-align: center;
+            }
+          }
+        }
+      }
+      // Technologies Page...
+      // Technologies Left section...
+      .techs-left-section {
+        width: 100%;
+        .techs-text-wrapper {
+          width: 100%;
+          margin: 0rem !important;
+          article {
+            display: flex;
+            flex-direction: column;
+            .second-slider {
+              ul {
+                display: flex;
+                justify-content: center;
+              }
+            }
+            .techs-body-text-container {
+              span {
+                font-size: 1.4rem;
+                line-height: 1.68rem;
+                letter-spacing: 0.236rem;
+              }
+              .techs-primary-heading {
+                font-size: 2.4rem;
+                line-height: 2.75rem;
+              }
+              .techs-body-text {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                width: 32.7rem;
+                height: 17.5rem;
+              }
+            }
+          }
+        }
+      }
+      // Technologies Right section
+      .techs-right-section {
+        width: 37%;
+        .changed-img {
+          width: 23rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+// Media Queries for larger screens
+@media only screen and (min-width: 1439px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1679px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1919px) {
+  html {
+    font-size: 16px;
+  }
+}

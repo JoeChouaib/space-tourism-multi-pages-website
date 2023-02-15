@@ -1,0 +1,14 @@
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  .profile-reference {
+    font-size: 20px;
+    font-family: $bellefair-font;
+    font-weight: 700;
+    a {
+      text-decoration: none;
+      color: $quaternary-color;
+    }
+  }
+}
